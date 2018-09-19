@@ -1,5 +1,11 @@
+const house = ["Griff n' Dorks", "JigglyPuff", "That's So Ravenclaw", "Slytherin Above the Haters"];
+
 function writeToDom(div, string) {
     document.getElementById(div).innerHTML = string;
+}
+
+function addToDom(div, string) {
+    document.getElementById(div).innerHTML += string;
 }
 
 function clickedStart() {
@@ -10,10 +16,29 @@ function clickedStart() {
                 <label for="nameInput">Student: </label>
                 <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Enter student's name">
             </div>
-             <button type="submit" class="btn btn-primary">Submit</button>
+             <button type="submit" class="btn btn-primary" id='submitButt'>Submit</button>
         </form>`;       
         writeToDom('inputDiv', stringVar);
     })
 }
 
+function clickedSort() {
+    document.getElementById('inputDiv').addEventListener('click', function() {
+        if(event.target.id === 'submitButt') {        
+            let houseNum = Math.floor(Math.random()*4);
+            let stringVar = 
+            `<div class="card" style="width: 18rem;">
+                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">${nameInput.value}</h5>
+                    <p class="card-text">${house[houseNum]}</p>
+                    <a href="#" class="btn btn-primary">Expel</a>
+                </div>
+            </div>`;
+            addToDom('cardDiv', stringVar);
+        }
+    })
+}
+
 clickedStart();
+clickedSort();
