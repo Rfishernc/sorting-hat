@@ -32,7 +32,7 @@ function clickedSort() {
                 <div class="card-body">
                     <h5 class="card-title">${nameInput.value}</h5>
                     <p class="card-text">${house[houseNum]}</p>
-                    <a href="#" class="btn btn-primary">Expel</a>
+                    <a href="#" class="btn btn-primary expelButt">Expel</a>
                 </div>
             </div>`;
             addToDom('cardDiv', stringVar);
@@ -40,5 +40,14 @@ function clickedSort() {
     })
 }
 
+function clickedExpel() {
+    document.getElementById('cardDiv').addEventListener('click', function() {
+        if(event.target.classList.contains('expelButt') === true) {
+            event.target.parentNode.parentNode.remove();
+        }
+    })
+}
+
 clickedStart();
 clickedSort();
+clickedExpel();
