@@ -9,14 +9,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Yer a wizard Harry</h1>
-        <p class="lead">Why do wizards have fraternities?  I don't know but click below to arbitrarily place your child in one.</p>
-        <hr class="my-4">
-        <a class="btn btn-primary btn-lg" href="#" role="button" id='sortButt'>Start Sorting</a>
-    </div>    
-    <div id='inputDiv'></div>
-    <div id='cardDiv'></div>
+    <div id='container' class='d-flex justify-content-center'>
+        <div class="jumbotron">
+            <h1 class="display-4">Yer a wizard Harry</h1>
+            <p class="lead">Why do wizards have fraternities?  I don't know but click below to arbitrarily place your child in one.</p>
+            <hr class="my-4">
+            <a class="btn btn-dark btn-lg" href="#" role="button" id='sortButt'>Start Sorting</a>
+        </div>   
+    </div> 
+        <div id='inputDiv' class='w-50 ml-auto mr-auto'></div>   
+    <div id='cardDiv' class='d-flex flex-row flex-wrap justify-content-center'></div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
