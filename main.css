@@ -1,0 +1,13 @@
+.cardimg {
+    max-width: 50%;
+    height: 100px;
+}
+
+body {
+    background-color: beige;
+}
+
+.cardtext {
+    border: 1px black solid;
+    border-radius: 2px;
+}
